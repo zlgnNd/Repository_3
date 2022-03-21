@@ -1,0 +1,22 @@
+*{
+    margin: 30px;
+    padding: 0;
+}
+
+.counter h1 {
+    counter-reset: num-section;
+}
+
+.counter h2 {
+    counter-reset: num-chapter;
+}
+
+.counter h2:after{
+    counter-increment: num-section;
+    content: ' ' counter(num-section);
+}
+
+.counter h3:after {
+    counter-increment: num-chapter;
+    content: ' ' counter(num-section) '.' counter(num-chapter);
+}
